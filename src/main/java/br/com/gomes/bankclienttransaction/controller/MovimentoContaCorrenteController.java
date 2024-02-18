@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/bank-client-transaction")
 public class MovimentoContaCorrenteController {
     @Autowired
     private MovimentoContaCorrenteService movimentoService;

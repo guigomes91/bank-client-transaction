@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class BankClientTransactionApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("server.servlet.context-path", "/bank-client-transaction");
 		SpringApplication.run(BankClientTransactionApplication.class, args);
 	}
 

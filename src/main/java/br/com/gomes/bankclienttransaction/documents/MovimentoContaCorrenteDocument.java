@@ -1,5 +1,6 @@
 package br.com.gomes.bankclienttransaction.documents;
 
+import br.com.gomes.bankclienttransaction.dto.MovimentoInputDTO;
 import br.com.gomes.bankclienttransaction.enums.TipoMovimento;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +17,6 @@ import java.util.stream.Collectors;
 @Builder
 @Document(collation = "transaction")
 public class MovimentoContaCorrenteDocument {
-
 	@Id
 	private String id;
 
@@ -31,4 +31,17 @@ public class MovimentoContaCorrenteDocument {
 	private TipoMovimento tipoMovimento;
 
 	private UUID contaId;
+
+	public static MovimentoContaCorrenteDocument dtoToMovimentoContaCorrenteDocument(MovimentoInputDTO input) {
+		return MovimentoContaCorrenteDocument
+				.builder()
+				.contaId(input.getConta().getId())
+				.dataHoraMovimento(input.getDataHoraMovimento())
+				.id(input.getId().toString())
+				.valor(input.getValor())
+				.descricao(input.getDescricao())
+				.numeroDocumento(input.getNumeroDocumento())
+				.tipoMovimento(input.getTipoMovimento())
+				.build();
+	}
 }
