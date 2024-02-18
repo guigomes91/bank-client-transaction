@@ -2,6 +2,17 @@
 
 Transações de movimentações de contas, saldos e logs.
 
+- Spring Boot 3.2.2
+- Java 17
+- MongoDB
+- Lombok
+- Spring Web
+- Maven
+- Broker de mensageria (RabbitMQ)
+- Boas práticas de programação (DRY, KISS entre outros)
+- Design Patterns
+- SOLID
+
 Salva as transações no mongodb na nuvem (Data | Cloud MongoDB Cloud Atlas).
 
 Endereço para acesso as filas: http://localhost:15672/#/queues
