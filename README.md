@@ -2,6 +2,17 @@
 
 Transações de movimentações de contas, saldos e logs.
 
+- Spring Boot 3.2.2
+- Java 17
+- MongoDB
+- Lombok
+- Spring Web
+- Maven
+- Broker de mensageria (RabbitMQ)
+- Boas práticas de programação (DRY, KISS entre outros)
+- Design Patterns
+- SOLID
+
 Salva as transações no mongodb na nuvem (Data | Cloud MongoDB Cloud Atlas).
 
 Endereço para acesso as filas: http://localhost:15672/#/queues
@@ -12,7 +23,7 @@ Binding da fila para o listener:
 
 ![image](https://github.com/guigomes91/bank-client-transaction/assets/44264050/ce916608-6c1e-482e-bb9e-2a4fe6b758b4)
 
-Coleções no mongodb após publicação pelo serviço bank-conta ao realizar uma movimentação bancaria:
+Coleções no mongodb após publicação pelo serviço [bank-conta](https://github.com/guigomes91/bank-conta) ao realizar uma movimentação bancaria:
 
 ![image](https://github.com/guigomes91/bank-client-transaction/assets/44264050/4b9dc427-7722-4c7e-9e37-513c38a41632)
 
