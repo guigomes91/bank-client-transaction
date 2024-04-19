@@ -18,7 +18,7 @@ public class MovimentoContaCorrenteReceiver {
 
 	@RabbitListener(queues = AMQPConstantes.QUEUE_NAME_CLIENT_TRANSACTION)
 	public void transacaoContaCorrenteListener(MovimentoInputDTO input) {
-		log.info("Received {} moviment transaction with document: {}", input.getNumeroDocumento());
+		log.info("Received {} moviment transaction with document: {}", input.getNumeroDocumento(), input);
 
 		movimentoService.registrarMovimento(MovimentoContaCorrenteDocument.dtoToMovimentoContaCorrenteDocument(input));
 	}

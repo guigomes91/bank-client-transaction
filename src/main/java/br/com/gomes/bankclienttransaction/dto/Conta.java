@@ -10,12 +10,11 @@ import java.util.UUID;
 
 @Data
 public class Conta {
-    private UUID id;
 
+    private UUID id;
     private int numeroConta;
     private int agencia;
     private Cliente cliente;
-
     private BigDecimal saldo;
     private TipoConta tipoConta;
     private LocalDate dataCriacao = LocalDate.now();
